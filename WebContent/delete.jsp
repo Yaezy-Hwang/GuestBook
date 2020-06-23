@@ -12,7 +12,7 @@
 	try{
 		response.sendRedirect("main.jsp");
 	} catch(NumberFormatException e){
-		response.sendRedirect("deletePopup.jsp");
+		response.sendRedirect("deleteForm.jsp");
 	}
 	
 %>
