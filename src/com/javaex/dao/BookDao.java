@@ -54,7 +54,7 @@ public class BookDao {
 		}
 	}
 
-	public int insert(String name, String pw, String content) {
+	public int insert(GuestVo vo) {
 
 		getConnect();
 		int count = 0;
@@ -63,9 +63,9 @@ public class BookDao {
 			String query = "insert into guestbook values(seq_no.nextval, ?, ?, ?, sysdate)";
 			pstmt = conn.prepareStatement(query);
 			
-			pstmt.setString(1, name);
-			pstmt.setString(2, pw);
-			pstmt.setString(3, content);
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getPassword());
+			pstmt.setString(3, vo.getContent());
 			
 			count = pstmt.executeUpdate();
 			

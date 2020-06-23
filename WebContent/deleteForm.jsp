@@ -4,7 +4,6 @@
 
 <%
 	int no = Integer.parseInt(request.getParameter("no"));
-	GuestVo guest = new GuestVo();
 %>
 
 <!DOCTYPE html>

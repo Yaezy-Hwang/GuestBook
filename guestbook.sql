@@ -14,5 +14,3 @@ create table guestbook(
 create sequence seq_no
 increment by 1
 start with 1;
-
-commit;
